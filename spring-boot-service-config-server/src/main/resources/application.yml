@@ -1,0 +1,11 @@
+#file:/home/usuario/Documentos/SpringProjects/config
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/karlozeta/servicio-items-config.git
+server:
+  port: 8888

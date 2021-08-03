@@ -1,0 +1,26 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: servicio-items
+#Al usar eureka, esta informacion se registra de forma automatica en el servidor    
+#servicio-productos:
+#  ribbon:
+#    listOfServers: localhost:8001,localhost:9001   
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+#Tiempo de espera por si se genera un timeout     
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 20000
+#ribbon:
+#  ConnectTimeout: 3000
+#  ReadTimeout: 60000
