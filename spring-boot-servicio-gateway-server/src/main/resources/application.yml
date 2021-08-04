@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: servicio-gateway-server
+  cloud:
+    gateway:
+      routes:
+      - id: servicio-productos
+        uri: lb://servicio-productos
+        predicates:
+        - Path=/api/productos/**
+        ##StripPrefix se coloca 2 porque son la cantidad de prefijos que tiene la ruta, por ejemplo api=1 productos=2
+        filters:
+        - StripPrefix=2
+      - id: servicio-items
+        uri: lb://servicio-items
+        predicates:
+        - Path=/api/items/**
+        ##StripPrefix se coloca 2 porque son la cantidad de prefijos que tiene la ruta, por ejemplo api=1 productos=2
+        filters:
+        - StripPrefix=2
+    
+server:
+  port: 8090
+  
+eureka:
+  client:
+    service-url:
+      defaultZone:
+        http://localhost:8761/eureka
+        
+#Como se haría en el application.properties
+#spring.cloud.gateway.routes[0].id=servicio-productos
+#spring.cloud.gateway.routes[0].uri=lb://servicio-productos
+#spring.cloud.gateway.routes[0].predicates=Path=/api/productos/**
+#spring.cloud.gateway.routes[0].filters=StripPrefix=2
+# 
+#spring.cloud.gateway.routes[1].id=servicio-items
+#spring.cloud.gateway.routes[1].uri=lb://servicio-items
+#spring.cloud.gateway.routes[1].predicates=Path=/api/items/**
+#spring.cloud.gateway.routes[1].filters=StripPrefix=2
+#        
+        
