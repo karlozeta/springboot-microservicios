@@ -1,5 +1,7 @@
 package com.udemy.springboot.app.item.models;
 
+import com.udemy.springboot.app.commons.models.entity.Producto;
+
 public class Item {
 
 	private Producto producto;

@@ -2,7 +2,7 @@ package com.udemy.springboot.app.productos.services;
 
 import java.util.List;
 
-import com.udemy.springboot.app.productos.models.entity.Producto;
+import com.udemy.springboot.app.commons.models.entity.Producto;
 
 public interface IProductoService {
 

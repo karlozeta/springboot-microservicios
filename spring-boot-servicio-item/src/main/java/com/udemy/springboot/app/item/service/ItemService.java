@@ -3,7 +3,7 @@ package com.udemy.springboot.app.item.service;
 import java.util.List;
 
 import com.udemy.springboot.app.item.models.Item;
-import com.udemy.springboot.app.item.models.Producto;
+import com.udemy.springboot.app.commons.models.entity.Producto;
 
 public interface ItemService {
 	
