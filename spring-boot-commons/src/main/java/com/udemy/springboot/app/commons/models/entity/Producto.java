@@ -71,13 +71,14 @@ public class Producto implements Serializable {
 		this.port = port;
 	}
 
-	
 	public Producto(String nombre, Double precio, Date createAt) {
 		this.nombre = nombre;
 		this.precio = precio;
 		this.createAt = createAt;
 	}
 
+	public Producto() {
+	}
 
 	private static final long serialVersionUID = -2962782351844878563L;
 
