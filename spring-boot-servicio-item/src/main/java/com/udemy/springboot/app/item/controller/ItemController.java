@@ -45,9 +45,10 @@ public class ItemController {
 	@Autowired
 	private Environment environment; 
 	
-	//@Qualifier("serviceFeign")
+	//Para usar el feign @Qualifier("serviceFeign")
+	//Para usar el RestTemplate @Qualifier("serviceRestTemplate")
 	@Autowired
-	@Qualifier("serviceRestTemplate")
+	@Qualifier("serviceFeign")
 	private ItemService itemService;
 	
 	@GetMapping("/listar")
