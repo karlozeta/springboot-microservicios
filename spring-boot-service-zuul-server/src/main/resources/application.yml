@@ -17,7 +17,10 @@ zuul:
       path: /api/productos/**   
     items:
       service-id: servicio-items
-      path: /api/items/**    
+      path: /api/items/**   
+    usuarios:
+      service-id: servicio-usuarios
+      path: /api/usuarios/**  
       
 #Tiempo de espera por si se genera un timeout     
 #hystrix:

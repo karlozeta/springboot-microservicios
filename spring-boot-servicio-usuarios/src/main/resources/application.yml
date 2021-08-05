@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: servicio-usuarios
+server:
+  port: ${PORT:0}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka   
+       
+  #Configuracion para que se agregue un puerto aleatorio en vez de difinirlo
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+#Mostrar los Strings de las creaciones de las tablas y consultas SQL
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug      
