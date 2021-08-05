@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: servicio-oauth
+  config:
+    import: optional:configserver
+server:
+  port: 9100
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8791/eureka

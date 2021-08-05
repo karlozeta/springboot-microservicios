@@ -1,4 +1,4 @@
-package com.udemy.springboot.app.usuarios.commons.models.entity;
+package com.udemy.springboot.app.commons.usuarios.models.entity;
 
 import java.io.Serializable;
 import java.util.List;

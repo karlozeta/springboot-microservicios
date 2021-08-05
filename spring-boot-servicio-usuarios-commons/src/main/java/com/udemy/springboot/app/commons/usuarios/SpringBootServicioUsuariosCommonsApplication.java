@@ -1,4 +1,4 @@
-package com.udemy.springboot.app.usuarios.commons;
+package com.udemy.springboot.app.commons.usuarios;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
