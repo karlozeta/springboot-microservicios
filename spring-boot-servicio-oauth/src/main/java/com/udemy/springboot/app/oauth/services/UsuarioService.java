@@ -18,7 +18,7 @@ import com.udemy.springboot.app.commons.usuarios.models.entity.Usuario;
 import com.udemy.springboot.app.oauth.clients.UsuarioFeignClient;
 
 @Service
-public class UsuarioService implements UserDetailsService {
+public class UsuarioService implements IUsuarioService, UserDetailsService {
 	
 	private Logger logger = LoggerFactory.getLogger(UsuarioService.class);
 	
@@ -46,6 +46,11 @@ public class UsuarioService implements UserDetailsService {
 				usuario.getPassword(), 
 				usuario.getEnabled(), 
 				true, true, true, authorities);
+	}
+
+	@Override
+	public Usuario findByUsername(String username) {
+		return client.finByUsername(username);
 	}
 	
 	
