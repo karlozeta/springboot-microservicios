@@ -6,26 +6,26 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka/
       
 #Se usa para centralizar el acceso a todos los microservicios registrados en Eureka
 #Se asigna una ruta base o prefijo para a cada microservicio para acceder      
 zuul:
   routes:
     productos:
-      service-id: servicio-productos     
-      path: /api/productos/**   
+      service-id: servicio-productos
+      path: /api/productos/**
     items:
       service-id: servicio-items
-      path: /api/items/**   
+      path: /api/items/**
     usuarios:
       service-id: servicio-usuarios
-      path: /api/usuarios/** 
+      path: /api/usuarios/**
     security:
       service-id: servicio-oauth
-      path: /api/security/**  
+      path: /api/security/**
       sensitive-headers: Cookie,Set-Cookie
-      
+
 #Tiempo de espera por si se genera un timeout     
 hystrix:
   command:
@@ -36,4 +36,4 @@ hystrix:
             timeoutInMilliseconds: 20000
 ribbon:
   ConnectTimeout: 3000
-  ReadTimeout: 60000      
+  ReadTimeout: 10000

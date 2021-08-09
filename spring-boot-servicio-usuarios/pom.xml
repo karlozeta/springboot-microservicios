@@ -58,6 +58,8 @@
 			<artifactId>spring-boot-servicio-usuarios-commons</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		
+		
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
