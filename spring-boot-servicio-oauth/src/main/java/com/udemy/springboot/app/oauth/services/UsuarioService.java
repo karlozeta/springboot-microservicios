@@ -52,6 +52,12 @@ public class UsuarioService implements IUsuarioService, UserDetailsService {
 	public Usuario findByUsername(String username) {
 		return client.finByUsername(username);
 	}
+
+	@Override
+	public Usuario update(Usuario usuario, Long id) {
+		client.update(usuario, id);
+		return null;
+	}
 	
 	
 }
