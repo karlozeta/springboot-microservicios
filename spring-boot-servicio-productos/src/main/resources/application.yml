@@ -3,7 +3,10 @@ server:
 spring:
   application:
     name: servicio-productos 
-
+#Enviar el 1.0 es decir el 100% de las trazas de los request    
+  sleuth:
+    sampler:
+      probability: 1.0
 eureka:
   client:
     service-url:
