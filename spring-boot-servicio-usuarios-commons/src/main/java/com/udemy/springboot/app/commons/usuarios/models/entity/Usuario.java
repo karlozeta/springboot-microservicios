@@ -19,12 +19,8 @@ import javax.persistence.UniqueConstraint;
 public class Usuario implements Serializable {
 
 	@ManyToMany
-	@JoinTable(
-			name = "usuarios_roles", 
-			joinColumns = @JoinColumn(
-					name = "usuario_id"), 
-			inverseJoinColumns = @JoinColumn(name = "role_id"),
-			uniqueConstraints = {@UniqueConstraint(columnNames = {"usuario_id", "role_id"})})
+	@JoinTable(name = "usuarios_roles", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "role_id"), uniqueConstraints = {
+			@UniqueConstraint(columnNames = { "usuario_id", "role_id" }) })
 	private List<Rol> roles;
 
 	@Id
@@ -43,6 +39,16 @@ public class Usuario implements Serializable {
 
 	@Column(unique = true, length = 100)
 	private String email;
+
+	private Integer intentosLogin;
+
+	public Integer getIntentosLogin() {
+		return intentosLogin;
+	}
+
+	public void setIntentosLogin(Integer intentosLogin) {
+		this.intentosLogin = intentosLogin;
+	}
 
 	public List<Rol> getRoles() {
 		return roles;
