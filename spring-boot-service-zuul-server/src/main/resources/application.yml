@@ -2,18 +2,18 @@ spring:
   application:
     name: servicio-zuul-server
 #Enviar el 1.0 es decir el 100% de las trazas de los request    
-  sleuth:
-    sampler:
-      probability: 1.0
+#  sleuth:
+#    sampler:
+#      probability: 1.0
 #Ruta del servidor Zipkin, por defecto viene en el puerto 9411      
-  zipkin:
-    base-url: http://localhost:9411/
+#  zipkin:
+#    base-url: http://localhost:9411/
 server:
   port: 8090
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka
       
 #Se usa para centralizar el acceso a todos los microservicios registrados en Eureka
 #Se asigna una ruta base o prefijo para a cada microservicio para acceder      
@@ -40,7 +40,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 20000
+            timeoutInMilliseconds: 60000
 ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 10000  
+  ConnectTimeout: 9000
+  ReadTimeout: 30000  

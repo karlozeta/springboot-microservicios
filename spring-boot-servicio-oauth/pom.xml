@@ -66,6 +66,10 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+		</dependency>
 		<!-- Para Java 8 ya esta incluida esta dependencia, para Java 11 en adelante, no
 		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
