@@ -1,6 +1,10 @@
 spring:
   application:
     name: servicio-zuul-server
+  zipkin:
+    base-url: http://zipkin-server:9411
+    sender:
+      type: rabbit
 #Enviar el 1.0 es decir el 100% de las trazas de los request    
 #  sleuth:
 #    sampler:

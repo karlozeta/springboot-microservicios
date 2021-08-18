@@ -6,9 +6,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/karlozeta/servicio-items-config.git
+          uri: https://github.com/karlozeta/config-server.git
+server:
+  port: 8888
 #Se agrega username y password cuando el repositorio sea privado            
 #          username: karlozeta
 #          password: Ghmz.7328      
-server:
-  port: 8888
