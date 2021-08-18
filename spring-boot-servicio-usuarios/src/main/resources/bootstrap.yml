@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: servicio-clientes
+  cloud:
+    config:
+      uri: http://config-server:8888
+  profiles:
+    active: dev
